@@ -23,8 +23,8 @@ Sistema inteligente que resuelve **automáticamente** cualquier problema de Inve
 ## 📋 Instalación
 
 ```bash
-git clone https://github.com/tuuser/io-system
-cd io-system
+git clone https://github.com/moquileidor/io-solver
+cd io-solver
 pip install -r requirements.txt
 ```
 
