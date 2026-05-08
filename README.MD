@@ -1,26 +1,23 @@
-# 🎯 Sistema de Investigación de Operaciones v5
+# 🎯 Sistema de Investigación de Operaciones — Web App
 
-![Visitors](https://img.shields.io/github/visitors/tuuser/io-system?style=flat-square)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Spaces-Streamlit-blue)](https://huggingface.co/spaces)
 
-## Descripción
-
-Sistema inteligente que resuelve **automáticamente** cualquier problema de Investigación de Operaciones usando:
-
-- **Clasificación LLM**: Detecta el tipo de problema
-- **Solvers Determinísticos**: scipy, networkx, PuLP para precisión numérica
-- **Razonamiento IA**: Groq + OpenAI para explicaciones
-- **RAG**: Contextualización con el libro Hillier
+Sistema inteligente que resuelve **automáticamente** problemas de Investigación de Operaciones usando clasificación LLM + solvers determinísticos (scipy, networkx, PuLP) + RAG con el libro Hillier.
 
 ## 🚀 Características
 
-✅ 12 tipos de problemas soportados (LP, IP, Transporte, Flujo Máximo, PERT/CPM, Colas, EOQ, NLP, Asignación, Ruta Corta, etc)
-✅ Resolución numéricamente exacta (no adivinanzas del LLM)
-✅ Respuestas en texto plano legible
-✅ Historial en Supabase
-✅ Self-consistency para problemas sin solver
+- 12 tipos de problemas (LP, IP, Transporte, Flujo Máximo, PERT/CPM, Colas, EOQ, NLP, Asignación, Ruta Corta, etc.)
+- Resolución numéricamente exacta con solvers determinísticos
+- Respuestas en texto plano (formato terminal)
+- RAG con el libro Hillier desde Supabase
+- Self-consistency para problemas sin solver
 
-## 📋 Instalación
+## 📋 Requisitos
+
+- Python 3.10+
+- Claves de API: [Groq](https://console.groq.com) y [Supabase](https://supabase.com)
+
+## 💻 Ejecución local
 
 ```bash
 git clone https://github.com/moquileidor/io-solver
@@ -28,18 +25,24 @@ cd io-solver
 pip install -r requirements.txt
 ```
 
-## 🔧 Configuración
-
+Configurar variables de entorno:
 ```bash
-export GROQ_API_KEY="tu_key_aqui"
+export GROQ_API_KEY="tu_key"
 export SUPABASE_URL="https://tuproject.supabase.co"
-export SUPABASE_KEY="tu_secret_key_aqui"
+export SUPABASE_KEY="tu_key"
 ```
 
-## 💻 Uso
-
+Iniciar la app web:
 ```bash
-python sistema_io_v5_supabase_final.py
+streamlit run app.py
 ```
 
-Selecciona opción 1 y pega tu problema:
+## ☁️ Despliegue gratis (Hugging Face Spaces)
+
+1. Crear cuenta en [huggingface.co](https://huggingface.co)
+2. Crear Space → SDK **Streamlit** → conectar repo
+3. En **Settings → Secrets**:
+   - `GROQ_API_KEY`
+   - `SUPABASE_URL`
+   - `SUPABASE_KEY`
+4. Build automático → URL pública
