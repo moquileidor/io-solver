@@ -1,3 +1,16 @@
+---
+title: IO Solver
+emoji: 📘
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.45.1"
+python_version: "3.11"
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # 🎯 Sistema de Investigación de Operaciones — Web App
 
 [![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Spaces-Streamlit-blue)](https://huggingface.co/spaces)
