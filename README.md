@@ -13,7 +13,7 @@ license: mit
 
 # 🎯 Sistema de Investigación de Operaciones — Web App
 
-[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Spaces-Streamlit-blue)](https://huggingface.co/spaces)
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Spaces-Live-blue)](https://huggingface.co/spaces/JorgeAlvarado19/io-solver)
 
 Sistema inteligente que resuelve **automáticamente** problemas de Investigación de Operaciones usando clasificación LLM + solvers determinísticos (scipy, networkx, PuLP) + RAG con el libro Hillier.
 
